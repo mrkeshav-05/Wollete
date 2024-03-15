@@ -8,6 +8,7 @@ import { consumerList } from './Content'
 import { partnersList } from './Content'
 import { developerList } from './Content'
 import { resourcesList } from './Content'
+import { login } from './Content'
 export default function Navbar() {
   const [toggle, setToggle] = useState(false)
   const [toggle1, setToggle1] = useState(false)
@@ -83,23 +84,21 @@ export default function Navbar() {
                         height="16"
                         viewBox="0 0 16 16"
                         fill="none"
-                        className={`xl:mt-1 lg:mt-1 lg:ml-[4px] ${
-                          nav == 'Merchants' ? 'hidden' : 'block'
-                        } md:mt-[3.6px] md:ml-[1px]`}
+                        className={`xl:mt-1 lg:mt-1 lg:ml-[4px] ${nav == 'Merchants' ? 'hidden' : 'block'
+                          } md:mt-[3.6px] md:ml-[1px]`}
                       >
                         <path
                           d="M3 6L7.50667 11L12 6"
                           stroke="#131313"
-                          className="group-hover:stroke-[#0E72E8]"
+                          className="group-hover:stroke-[#0E72E8]  "
                           strokeWidth="1.5"
                         />
                       </svg>
                     </Link>
 
                     <div
-                      className={`sidebar absolute top-[120px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] slide-top ${
-                        list0 && nav === 'Consumers' ? 'block' : 'hidden'
-                      }`}
+                      className={`sidebar  absolute top-[120px] bg-[#FFFFFF]  rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] slide-top ${list0 && nav === 'Consumers' ? 'block' : 'hidden'
+                        }`}
                     >
                       {consumerList.map((nav, id) => {
                         return (
@@ -108,7 +107,7 @@ export default function Navbar() {
                               <Link
                                 href={nav.toLowerCase()}
                                 style={{ textDecoration: 'none' }}
-                                className={`text-[black] group-hover:text-[#0E72E8]`}
+                                className={`text-[black]  group-hover:text-[#0E72E8]`}
                               >
                                 {nav}
                               </Link>
@@ -118,9 +117,8 @@ export default function Navbar() {
                       })}
                     </div>
                     <div
-                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${
-                        list1 && nav == 'Partners' ? 'block' : 'hidden'
-                      } slide-top`}
+                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${list1 && nav == 'Partners' ? 'block' : 'hidden'
+                        } slide-top`}
                     >
                       {partnersList.map((nav, id) => {
                         return (
@@ -139,9 +137,8 @@ export default function Navbar() {
                       })}
                     </div>
                     <div
-                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${
-                        list2 && nav == 'Developers' ? 'block' : 'hidden'
-                      } slide-top`}
+                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${list2 && nav == 'Developers' ? 'block' : 'hidden'
+                        } slide-top`}
                     >
                       {developerList.map((nav, id) => {
                         return (
@@ -154,9 +151,8 @@ export default function Navbar() {
                       })}
                     </div>
                     <div
-                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${
-                        list3 && nav == 'Resources' ? 'block' : 'hidden'
-                      } slide-top`}
+                      className={`absolute sidebar top-[135px] bg-[#FFFFFF] rounded-[10px] p-[8px] shadow-[2px_2px_4px_0px_rgba(0,0,0,0.15)] ${list3 && nav == 'Resources' ? 'block' : 'hidden'
+                        } slide-top`}
                     >
                       {resourcesList.map((nav, id) => {
                         return (
@@ -206,7 +202,16 @@ export default function Navbar() {
               </svg>
             </div>
             <div className="flex shrink-0">
-              <Login />
+              <Link
+                href={login[0].toLowerCase()}
+              >
+                <Login
+                  className="text-[#131313] font-semibold leading-[150%] text-[17px] hover:text-[#0E72E8] transition-all"
+                  text="Login"
+                />
+              </Link>
+
+
             </div>
           </section>
         </nav>
@@ -234,6 +239,15 @@ export default function Navbar() {
                 />
               </svg>
             </div>
+            <Link
+                href={login[0].toLowerCase()}
+                className={``}
+              >
+                <Login
+                  className="text-[#131313] font-semibold leading-[150%] text-[17px] hover:text-[#0E72E8] transition-all"
+                  text="Login"
+                />
+              </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="38"
@@ -247,15 +261,18 @@ export default function Navbar() {
               <path d="M36 19H8V21H36V19Z" fill="#020659" />
               <path d="M36 27H12V29H36V27Z" fill="#020659" />
             </svg>
+            
           </div>
+          
         </nav>
       </div>
+      
 
       <div
-        className={`${
-          toggle ? 'block fixed top-5 right-[4vw]' : 'hidden'
-        } w-[92%] h-[97%] mb-[50px] shrink-0 rounded-[5px] shadow-[0px_0px_10px_2px_rgba(0,0,0,0.15)] bg-[#FFFFFF] z-[100000]`}
+        className={`${toggle ? 'block fixed top-5 right-[4vw]' : 'hidden'
+          } w-[92%] h-[97%] mb-[50px] shrink-0 rounded-[5px] shadow-[0px_0px_10px_2px_rgba(0,0,0,0.15)] bg-[#FFFFFF] z-[100000]`}
       >
+        
         <div className="flex justify-between ">
           {/* <img src="/png/logo.png" alt="logo" className="w-[120px] h-[40px] ml-[15px] mt-[10px]" /> */}
           <Image
@@ -321,9 +338,8 @@ export default function Navbar() {
           </svg>
         </div>
         <div
-          className={`${
-            toggle1 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle1 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -334,9 +350,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle1 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle1 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -381,9 +396,8 @@ export default function Navbar() {
           </svg>
         </div>
         <div
-          className={`${
-            toggle2 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle2 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -394,9 +408,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle2 ? 'flex' : 'hidden'
-          } flex flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle2 ? 'flex' : 'hidden'
+            } flex flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -442,9 +455,8 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`${
-            toggle3 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle3 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -455,9 +467,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle3 ? 'flex' : 'hidden'
-          }  flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle3 ? 'flex' : 'hidden'
+            }  flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -468,9 +479,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle3 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle3 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -481,9 +491,8 @@ export default function Navbar() {
           </Link>{' '}
         </div>
         <div
-          className={`${
-            toggle3 ? 'flex' : 'hidden'
-          }  flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle3 ? 'flex' : 'hidden'
+            }  flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -494,9 +503,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle3 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle3 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -541,9 +549,8 @@ export default function Navbar() {
           </svg>
         </div>
         <div
-          className={`${
-            toggle4 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle4 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -554,9 +561,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle4 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle4 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
@@ -567,14 +573,13 @@ export default function Navbar() {
           </Link>
         </div>
         <div
-          className={`${
-            toggle4 ? 'flex' : 'hidden'
-          } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
+          className={`${toggle4 ? 'flex' : 'hidden'
+            } flex-row items-center h-[40px] pl-[25px] text-[#131313] text-header-mobile-sb hover:bg-[#EBF4FF]`}
         >
           <Link
             href="#"
             style={{ textDecoration: 'none' }}
-            className="text-[black] hover:text-[#0E72E8]"
+            className="text-[black]  hover:text-[#0E72E8]"
           >
             {resourcesList[2]}
           </Link>

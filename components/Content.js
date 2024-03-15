@@ -46,6 +46,7 @@ const partnersList = ['POS Providers', 'Third parties']
 const developerList = ['Console', 'Support', 'Help center', 'Status page', 'API reference']
 const resourcesList = ['News', 'About us', 'Contact us']
 
+const login = ['login']
 export {
   consumerList,
   developerList,
@@ -54,4 +55,5 @@ export {
   partnersList,
   resourcesList,
   workingStepsContent,
+  login,
 }
