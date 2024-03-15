@@ -4,15 +4,17 @@ import React from 'react'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
 import { login } from '@/components/Content'
+import { FaLockOpen } from "react-icons/fa";
 const forgotPassword = () => {
   return (
     <div className="min-h-screen background-styling">
       <Navbar />
       <div className='flex justify-center  mt-20'>
-        <div class="rounded-lg border-2 bg-card text-card-foreground shadow-sm w-full max-w-sm" data-v0-t="card">
+        <div class="rounded-lg border-2 bg-white bg-card text-card-foreground shadow-sm w-full max-w-sm" data-v0-t="card">
           <div class="flex flex-col space-y-1.5 p-6">
-            <div>ForgotPassword</div>
-            <div>Enter your email address and we'll send you a link to reset your password.</div>
+            <FaLockOpen width={20} height={20} />
+            <div className='flex justify-center text-3xl font-semibold'>ForgotPassword</div>
+            <div className='text-slate-500 '>Enter your email address and we'll send you a link to reset your password.</div>
           </div>
           <div class="p-6 grid gap-4">
             <div class="space-y-1.5">

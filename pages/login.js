@@ -19,7 +19,7 @@ const LogIn = () => {
   return (
     <div className="min-h-screen background-styling">
       <Navbar />
-      <div className="pt-12 px-4 border-4">
+      <div className="pt-12 px-4 ">
         <div className="max-w-2xl space-y-12 mx-auto">
           <p className="text-h2 text-dark">Sign in</p>
           <p className="text-lg text-dark-gray">
