@@ -47,6 +47,7 @@ const developerList = ['Console', 'Support', 'Help center', 'Status page', 'API 
 const resourcesList = ['News', 'About us', 'Contact us']
 
 const login = ['login']
+const forgotpassword = ['forgotpassword']
 export {
   consumerList,
   developerList,
@@ -56,4 +57,5 @@ export {
   resourcesList,
   workingStepsContent,
   login,
+  forgotpassword,
 }

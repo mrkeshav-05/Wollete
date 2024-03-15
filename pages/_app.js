@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
     <main className={inter.className}>
       <ToastContainer />
       <Component {...pageProps} />
+      
     </main>
   )
 }

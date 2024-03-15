@@ -6,7 +6,8 @@ import { useForm } from 'react-hook-form'
 import Button from '@/components/buttons/Primary'
 import FormInput from '@/components/FormInput'
 import Navbar from '@/components/Navbar'
-
+import { ForgotPassword } from '@/components/buttons/ForgotPassword'
+import { forgotpassword } from '@/components/Content'
 const LogIn = () => {
   const {
     register,
@@ -47,8 +48,8 @@ const LogIn = () => {
               />
             </Stack>
             <div className="flex mt-4">
-              <Link href={'/forgot-password'}>
-                <p className="text-lg text-main-primary">Forgot your password?</p>
+              <Link href={forgotpassword[0].toLowerCase()}>
+                <ForgotPassword />
               </Link>
             </div>
             <Button type="submit" className="mt-12">
