@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![Wollete Logo](./public/svg/logo.svg)
+<img width="199" height="77" alt="image" src="https://github.com/user-attachments/assets/bf72cd35-8d1e-44ba-8fec-4fa0aa61eba2" />
+
 
 **Secure & Anonymous Digital Receipt Management Platform**
 
@@ -54,24 +55,22 @@ Wollete is a cutting-edge Next.js web application designed to revolutionize the 
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page Screenshot](./screenshots/home.png)
-*The landing page showcasing Wollete's main features and benefits*
+<img width="1440" height="804" alt="image" src="https://github.com/user-attachments/assets/0a931ecd-47af-45b2-b014-b936bcc36813" />
+
 
 ### Merchant Dashboard
-![Merchant Dashboard Screenshot](./screenshots/merchant-dashboard.png)
-*Comprehensive dashboard for merchants to manage transactions and receipts*
+<img width="1440" height="611" alt="image" src="https://github.com/user-attachments/assets/2d3e8d91-c48d-4da2-bdfe-d402cd0f049f" />
+
 
 ### Benefits Page
-![Benefits Page Screenshot](./screenshots/benefits.png)
-*Detailed overview of advantages for businesses and consumers*
+<img width="1440" height="694" alt="image" src="https://github.com/user-attachments/assets/680da7da-2396-483f-886c-6dfece4ca691" />
+<img width="1440" height="736" alt="image" src="https://github.com/user-attachments/assets/2e5a3d75-a65e-4da1-bf55-533ec88009f7" />
+
 
 ### Sign Up Flow
-![Sign Up Screenshot](./screenshots/signup.png)
-*Streamlined registration process for merchants and third parties*
+<img width="818" height="797" alt="image" src="https://github.com/user-attachments/assets/c56b199a-1928-45fe-bead-990ed7640473" />
 
-### Contact Us
-![Contact Page Screenshot](./screenshots/contact.png)
-*Easy-to-use contact form for support and inquiries*
+
 
 ---
 
